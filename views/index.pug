@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  header 
+    h1= 'Node Messenger'
+
+  div.messages
+    a.add(href='/new') Add a message!
+    each message in messages
+      div.message
+        h3.text #{message.text}
+        div.message-footer
+          h5.user #{message.user}
+          h5.dot ·
+          h5.time #{message.date}

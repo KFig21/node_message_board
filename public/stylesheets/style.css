@@ -1,0 +1,182 @@
+:root {
+  --accentColor: #fcc03f;
+  --accentColorhover: #ffce65;
+  --subtext: rgb(154, 159, 161);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #333;
+  color: whitesmoke;
+}
+
+header {
+  background: #222;
+  color: whitesmoke;
+  text-decoration: underline 3.5px solid var(--accentColor);
+  text-underline-offset: 0.5px;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.65);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* index */
+.add {
+  color: whitesmoke;
+  background-color: #222;
+  border-radius: 2px 20px 20px 20px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.65);
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 200;
+  transition: all 0.2s ease;
+}
+
+.add:hover {
+  background-color: var(--accentColor);
+  color: #111;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  min-width: 500px;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 2px 20px 20px 20px;
+  background-color: #222;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.65);
+  transition: all 0.2s ease;
+}
+
+.message:hover {
+  transform: scale(1.02);
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 200;
+  padding: 5px 0px;
+}
+
+.message-footer {
+  display: flex;
+  color: var(--subtext);
+}
+
+.user {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dot {
+  font-size: 14px;
+  font-weight: 200;
+  padding: 0px 5px;
+}
+
+.time {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+/* new */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  min-width: 500px;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 2px 20px 20px 20px;
+  background-color: #222;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.65);
+}
+
+.message-input {
+  background-color: #222;
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 5px 0px;
+  min-height: 100px;
+  border: none;
+  outline: none;
+}
+
+.name-input {
+  font-size: 20px;
+  font-weight: 200;
+  background-color: #222;
+  color: whitesmoke;
+  padding: 10px 0px;
+  outline: none;
+  border: none;
+}
+
+.post-button {
+  color: whitesmoke;
+  background-color: #333;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 10px 18px;
+  margin: 2px;
+  border-radius: 2px 20px 20px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.post-button:hover,
+.post-button:focus {
+  background-color: #444;
+}
+
+.go-back {
+  background-color: var(--accentColor);
+  color: #111;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 10px 18px;
+  margin: 2px;
+  border-radius: 2px 20px 20px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.go-back:hover,
+.go-back:focus {
+  background-color: var(--accentColorhover);
+}

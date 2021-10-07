@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  header 
+    h1= 'Node Messenger'
+
+  div.form-container
+    form.message-form(action='/new', method='POST')
+      textarea.message-input(type='text' name="message" placeholder='Say something!')
+      input.name-input(type='text' name="user" placeholder='Name')
+      button.post-button(type='submit') Post
+
+    form(action='/')
+      input.go-back(type='submit' value='Go back')
