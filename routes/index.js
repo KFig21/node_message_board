@@ -6,12 +6,12 @@ const messages = [
   {
     text: "Hi there!",
     user: "Amando",
-    date: moment().startOf("day").fromNow(),
+    date: moment().startOf("hour").fromNow(),
   },
   {
     text: "Hello World!",
     user: "Charles",
-    date: moment().startOf("hour").fromNow(),
+    date: moment().startOf("day").fromNow(),
   },
 ];
 
@@ -29,6 +29,12 @@ router.post("/new", function (req, res, next) {
       .startOf("hour" - 1)
       .fromNow(),
   };
+
+  if (!newMessage.user || !newMessage.text) {
+    res.render("new", { error: "Please include a message and name!" });
+    return;
+  }
+
   messages.unshift(newMessage);
   res.redirect("/");
 });
